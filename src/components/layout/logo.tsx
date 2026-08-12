@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import logoIcon from "@/assets/brand/logo-icon.png";
+import logoIcon from "@/assets/brand/logo-mark.png";
 
 export function Logo({ className, dark = false }: { className?: string; dark?: boolean }) {
   return (

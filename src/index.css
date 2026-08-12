@@ -92,6 +92,10 @@
     scroll-behavior: auto;
   }
 
+  [id] {
+    scroll-margin-top: 6rem;
+  }
+
   body {
     background-color: var(--color-bg);
     color: var(--color-ink);

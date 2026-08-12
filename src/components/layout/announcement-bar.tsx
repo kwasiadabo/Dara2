@@ -18,7 +18,7 @@ export function AnnouncementBar() {
         >
           <Container className="flex items-center justify-center gap-3 py-2.5 text-center">
             <p className="text-[13px] font-medium leading-snug text-white/90">
-              Simple financial solutions built for individuals and businesses in Ghana.
+              A locally owned lending house in Achimota, Accra — clear terms, fast decisions.
             </p>
             <button
               type="button"
