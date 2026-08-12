@@ -1,0 +1,29 @@
+import { Hero } from "@/components/hero/hero";
+import { TrustSection } from "@/components/sections/trust-section";
+import { StatsBanner } from "@/components/sections/stats-banner";
+import { LoanProducts } from "@/components/sections/loan-products";
+import { ProcessTimeline } from "@/components/sections/process-timeline";
+import { GhanaSection } from "@/components/sections/ghana-section";
+import { ResponsibleLending } from "@/components/sections/responsible-lending";
+import { WhyDara } from "@/components/sections/why-dara";
+import { Testimonials } from "@/components/sections/testimonials";
+import { FaqSection } from "@/components/sections/faq-section";
+import { FinalCta } from "@/components/sections/final-cta";
+
+export function Home() {
+  return (
+    <>
+      <Hero />
+      <TrustSection />
+      <StatsBanner />
+      <LoanProducts />
+      <ProcessTimeline />
+      <GhanaSection />
+      <ResponsibleLending />
+      <WhyDara />
+      <Testimonials />
+      <FaqSection />
+      <FinalCta />
+    </>
+  );
+}
