@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
+import { Check } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { loanProducts } from "@/data/products";
@@ -22,7 +22,7 @@ export function LoanProducts() {
           initial="hidden"
           whileInView="visible"
           viewport={viewportOnce}
-          className="mt-16 grid grid-cols-1 gap-5 sm:grid-cols-2"
+          className="mt-16 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3"
         >
           {loanProducts.map((product) => {
             const Icon = product.icon;
@@ -33,7 +33,7 @@ export function LoanProducts() {
                 variants={fadeUp}
                 whileHover={{ y: -4 }}
                 transition={{ duration: 0.35, ease: [0.25, 1, 0.5, 1] }}
-                className="group flex flex-col rounded-[1.75rem] border border-border bg-white p-8 transition-colors duration-300 hover:border-primary/30"
+                className="group flex h-full flex-col rounded-[1.75rem] border border-border bg-white p-8 transition-colors duration-300 hover:border-primary/30"
               >
                 <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary-light text-primary-dark transition-colors duration-300 group-hover:bg-primary group-hover:text-white">
                   <Icon className="h-5 w-5" strokeWidth={2} />
@@ -46,13 +46,20 @@ export function LoanProducts() {
                   {product.description}
                 </p>
 
-                <span className="mt-7 inline-flex items-center gap-1.5 text-[14px] font-semibold text-primary-dark">
-                  {product.cta}
-                  <ArrowUpRight
-                    className="h-4 w-4 transition-transform duration-300 ease-out-quart group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                    strokeWidth={2.25}
-                  />
-                </span>
+                <ul className="mt-5 space-y-2">
+                  {product.features.map((feature) => (
+                    <li
+                      key={feature}
+                      className="flex items-start gap-2 text-[14px] text-ink-soft"
+                    >
+                      <Check
+                        className="mt-0.5 h-4 w-4 shrink-0 text-primary-dark"
+                        strokeWidth={2.5}
+                      />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
               </motion.a>
             );
           })}

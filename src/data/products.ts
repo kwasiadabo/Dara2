@@ -1,50 +1,56 @@
 import type { LucideIcon } from "lucide-react";
-import { Briefcase, RefreshCw, Wallet, Users } from "lucide-react";
+import { Briefcase, TrendingUp, Users } from "lucide-react";
 
 export interface LoanProduct {
   id: string;
   icon: LucideIcon;
   name: string;
   description: string;
-  cta: string;
+  features: string[];
   href: string;
 }
 
 export const loanProducts: LoanProduct[] = [
   {
-    id: "business",
+    id: "micro-loan",
     icon: Briefcase,
-    name: "Business Loans",
+    name: "Dara Micro Loan",
     description:
-      "Working capital to stock up, expand your space, or seize an opportunity — sized to fit your business.",
-    cta: "Learn More",
+      "A term loan meant for small and medium enterprises as well as individuals in trade and commerce, services, transport, and other sectors of the economy.",
+    features: [
+      "No prior savings",
+      "Competitive interest rate",
+      "Collateral free",
+      "Daily, weekly, or monthly repayment",
+    ],
     href: "/#contact",
   },
   {
-    id: "working-capital",
-    icon: RefreshCw,
-    name: "Working Capital",
-    description:
-      "Bridge the gap between buying stock and getting paid — built for seasonal and trade cash flow.",
-    cta: "Learn More",
-    href: "/#contact",
-  },
-  {
-    id: "personal",
-    icon: Wallet,
-    name: "Salary & Personal Loans",
-    description:
-      "Short-term personal financing for salaried workers — for emergencies, bills, or big life moments.",
-    cta: "Learn More",
-    href: "/#contact",
-  },
-  {
-    id: "group",
+    id: "special-loan",
     icon: Users,
-    name: "Group Loans",
+    name: "Dara Special Loan",
     description:
-      "Susu-style group lending for trader associations and cooperative groups who grow together.",
-    cta: "Learn More",
+      "Strategically designed for clients who cannot afford formal bank loans due to the nature and size of their businesses. An individual or group loan tailored to improve existing businesses through easy access to affordable services and a comprehensive repayment method.",
+    features: [
+      "No prior savings",
+      "Competitive interest rate",
+      "Collateral free",
+      "Daily, weekly, or monthly repayment",
+    ],
+    href: "/#contact",
+  },
+  {
+    id: "daraplus-loan",
+    icon: TrendingUp,
+    name: "DaraPlus Loan",
+    description:
+      "Designed for clients in business, this is a 3-4 month individual loan with monthly instalments.",
+    features: [
+      "No prior savings",
+      "Competitive interest rate",
+      "Flexible collateral",
+      "Daily, weekly, or monthly repayment",
+    ],
     href: "/#contact",
   },
 ];
