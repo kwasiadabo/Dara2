@@ -1,22 +1,20 @@
-import staffMeeting from "@/assets/images/dara images staff meeting.jpg";
-import officeLadies from "@/assets/images/dara office ladies.jpg";
-import maleResource from "@/assets/images/dara male resource.jpg";
-import clientPortrait from "@/assets/brand/photo-client-portrait.jpg";
-import consultationClean from "@/assets/brand/photo-consultation-clean.jpg";
-import borrowSmartFlyer from "@/assets/images/dara flyer.jpg";
-import happyCustomerFlyer from "@/assets/images/dara happy customer.jpg";
-import marketWomenFlyer from "@/assets/images/dara market women.jpg";
-import officeImageFlyer from "@/assets/images/dara office image.jpg";
-import coverGraphic from "@/assets/images/dara cover image.jpg";
-import logoOnStone from "@/assets/images/dara capital logo .jpg";
-import logoOnWood from "@/assets/images/dara woody image.jpg";
-import logoOnBlue from "@/assets/images/logo-dara.jpeg";
+import staffMeeting from "@/assets/gallery/staff-meeting.jpg";
+import officeLadies from "@/assets/gallery/office-ladies.jpg";
+import maleResource from "@/assets/gallery/male-resource.jpg";
+import clientPortrait from "@/assets/gallery/client-portrait.jpg";
+import consultationClean from "@/assets/gallery/consultation-clean.jpg";
+import borrowSmartFlyer from "@/assets/gallery/flyer-borrow-smart.jpg";
+import happyCustomerFlyer from "@/assets/gallery/flyer-happy-customer.jpg";
+import marketWomenFlyer from "@/assets/gallery/flyer-market-women.jpg";
+import officeImageFlyer from "@/assets/gallery/flyer-office-image.jpg";
+import coverGraphic from "@/assets/gallery/logo-cover.jpg";
+import logoOnStone from "@/assets/gallery/logo-stone.jpg";
+import logoOnWood from "@/assets/gallery/logo-wood.jpg";
+import logoOnBlue from "@/assets/gallery/logo-blue.jpg";
 
 export interface GalleryImage {
   src: string;
   alt: string;
-  /** "contain" keeps flyers/graphics fully visible instead of cropping their text. Default "cover". */
-  fit?: "cover" | "contain";
 }
 
 export const galleryImages: GalleryImage[] = [
@@ -27,7 +25,6 @@ export const galleryImages: GalleryImage[] = [
   {
     src: borrowSmartFlyer,
     alt: "Dara Micro Credit promotional flyer: Borrow Smart, Borrow Clear",
-    fit: "contain",
   },
   {
     src: officeLadies,
@@ -36,7 +33,6 @@ export const galleryImages: GalleryImage[] = [
   {
     src: happyCustomerFlyer,
     alt: "Dara Micro Credit promotional flyer: You got the business, we've got the funds",
-    fit: "contain",
   },
   {
     src: clientPortrait,
@@ -45,7 +41,6 @@ export const galleryImages: GalleryImage[] = [
   {
     src: marketWomenFlyer,
     alt: "Dara Micro Credit promotional flyer: Need a business loan?",
-    fit: "contain",
   },
   {
     src: maleResource,
@@ -54,7 +49,6 @@ export const galleryImages: GalleryImage[] = [
   {
     src: officeImageFlyer,
     alt: "Dara Micro Credit promotional flyer: Get your loan approved swiftly, with no hassle",
-    fit: "contain",
   },
   {
     src: consultationClean,
@@ -63,21 +57,17 @@ export const galleryImages: GalleryImage[] = [
   {
     src: coverGraphic,
     alt: "Dara Micro Credit logo cover graphic",
-    fit: "contain",
   },
   {
     src: logoOnStone,
     alt: "Dara Micro Credit logo",
-    fit: "contain",
   },
   {
     src: logoOnWood,
     alt: "Dara Micro Credit logo on a wood panel background",
-    fit: "contain",
   },
   {
     src: logoOnBlue,
     alt: "Dara Micro Credit logo on a blue background",
-    fit: "contain",
   },
 ];
