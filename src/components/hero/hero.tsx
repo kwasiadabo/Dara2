@@ -65,7 +65,7 @@ export function Hero() {
 						animate="visible"
 						className="mt-6 max-w-lg text-[17px] leading-relaxed text-ink-soft lg:text-[18px]"
 					>
-						Dara Micro-Credit is financial services provider which is located at
+						Dara Micro-Credit is financial service provider which is located at
 						Achimota-Accra. We fund traders, business owners and salary workers
 						with clear terms, fast decisions and no hidden cost. Your wealth,
 						our wealth.

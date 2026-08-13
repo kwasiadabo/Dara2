@@ -14,6 +14,8 @@ export interface AnnouncementModalContent {
 	startAt: string;
 	/** ISO datetime — popup stays hidden after this. */
 	endAt: string;
+	/** How often it reappears for a visitor who already saw it, regardless of whether they closed it. Default 2 (every other day). */
+	repeatIntervalDays?: number;
 	image?: {
 		src: string;
 		alt: string;
@@ -33,6 +35,7 @@ export const announcementModal: AnnouncementModalContent = {
 	id: '2026-08-daraplus-launch',
 	startAt: '2026-08-12T00:00:00+00:00',
 	endAt: '2026-08-16T23:59:00+00:00',
+	repeatIntervalDays: 2,
 	image: {
 		src: officeTeamMeeting,
 		alt: 'Dara Micro Credit team at the Achimota office',
