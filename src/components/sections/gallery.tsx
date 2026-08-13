@@ -1,6 +1,7 @@
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { galleryImages } from "@/data/gallery";
+import { cn } from "@/lib/utils";
 
 export function Gallery() {
   const track = [...galleryImages, ...galleryImages];
@@ -29,13 +30,19 @@ export function Gallery() {
           {track.map((image, i) => (
             <div
               key={`${image.src}-${i}`}
-              className="h-72 w-56 shrink-0 overflow-hidden rounded-[1.75rem] shadow-[var(--shadow-soft-md)] sm:h-80 sm:w-64"
+              className={cn(
+                "h-72 w-56 shrink-0 overflow-hidden rounded-[1.75rem] shadow-[var(--shadow-soft-md)] sm:h-80 sm:w-64",
+                image.fit === "contain" && "bg-bg-soft",
+              )}
             >
               <img
                 src={image.src}
                 alt={image.alt}
                 loading="lazy"
-                className="h-full w-full object-cover"
+                className={cn(
+                  "h-full w-full",
+                  image.fit === "contain" ? "object-contain" : "object-cover",
+                )}
               />
             </div>
           ))}
