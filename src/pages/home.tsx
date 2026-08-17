@@ -6,7 +6,6 @@ import { StatsBanner } from '@/components/sections/stats-banner';
 import { LoanProducts } from '@/components/sections/loan-products';
 import { ProcessTimeline } from '@/components/sections/process-timeline';
 import { GhanaSection } from '@/components/sections/ghana-section';
-import { Gallery } from '@/components/sections/gallery';
 import { ResponsibleLending } from '@/components/sections/responsible-lending';
 import { WhyDara } from '@/components/sections/why-dara';
 import { Testimonials } from '@/components/sections/testimonials';

@@ -1,24 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
   <url>
-    <loc>https://daramicrocredit.com/</loc>
+    <loc>https://www.daramicrocredit.com/</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
   </url>
-
-  <url>
-    <loc>https://daramicrocredit.com/about</loc>
-  </url>
-
-  <url>
-    <loc>https://daramicrocredit.com/services</loc>
-  </url>
-
-  <url>
-    <loc>https://daramicrocredit.com/loans</loc>
-  </url>
-
-  <url>
-    <loc>https://daramicrocredit.com/contact</loc>
-  </url>
-
 </urlset>
