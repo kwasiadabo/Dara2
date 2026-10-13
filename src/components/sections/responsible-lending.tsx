@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { FileText, Calendar, EyeOff, LifeBuoy, Lock } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
@@ -43,7 +43,7 @@ export function ResponsibleLending() {
             description="Micro-credit should build confidence, not confusion. Here's how we keep every step transparent and fair."
           />
 
-          <motion.div
+          <m.div
             variants={staggerChildren(0.09)}
             initial="hidden"
             whileInView="visible"
@@ -51,7 +51,7 @@ export function ResponsibleLending() {
             className="grid grid-cols-1 gap-4 sm:grid-cols-2"
           >
             {commitments.map(({ icon: Icon, title, description }) => (
-              <motion.div
+              <m.div
                 key={title}
                 variants={fadeUp}
                 className="rounded-2xl border border-border bg-bg-soft p-6"
@@ -59,9 +59,9 @@ export function ResponsibleLending() {
                 <Icon className="h-5 w-5 text-primary" strokeWidth={2} />
                 <h3 className="mt-4 text-[16px] font-bold text-ink">{title}</h3>
                 <p className="mt-2 text-[14px] leading-relaxed text-ink-soft">{description}</p>
-              </motion.div>
+              </m.div>
             ))}
-          </motion.div>
+          </m.div>
         </div>
       </Container>
     </section>

@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
@@ -17,7 +17,7 @@ export function GhanaSection() {
   return (
     <section className="overflow-hidden bg-bg-soft py-24 lg:py-32">
       <Container className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2 lg:gap-14">
-        <motion.div
+        <m.div
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
@@ -61,14 +61,14 @@ export function GhanaSection() {
             delay={0.6}
             floatDuration={5.6}
           />
-        </motion.div>
+        </m.div>
 
         <div>
-          <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={viewportOnce}>
+          <m.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={viewportOnce}>
             <Eyebrow>Who We Are</Eyebrow>
-          </motion.div>
+          </m.div>
 
-          <motion.h2
+          <m.h2
             variants={slideInLeft}
             initial="hidden"
             whileInView="visible"
@@ -76,9 +76,9 @@ export function GhanaSection() {
             className="mt-5 text-balance text-[34px] font-bold leading-[1.12] tracking-tight text-ink sm:text-[42px] lg:text-[46px]"
           >
             You got the business. We've got the funds.
-          </motion.h2>
+          </m.h2>
 
-          <motion.p
+          <m.p
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
@@ -91,9 +91,9 @@ export function GhanaSection() {
             borrowing. Real people review your application, terms are
             explained in plain language, and once you're approved, your
             funds move fast.
-          </motion.p>
+          </m.p>
 
-          <motion.ul
+          <m.ul
             variants={staggerChildren(0.1)}
             initial="hidden"
             whileInView="visible"
@@ -101,14 +101,14 @@ export function GhanaSection() {
             className="mt-8 flex flex-col gap-3.5"
           >
             {points.map((point) => (
-              <motion.li key={point} variants={fadeUp} className="flex items-start gap-3">
+              <m.li key={point} variants={fadeUp} className="flex items-start gap-3">
                 <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-primary" strokeWidth={2} />
                 <span className="text-[15px] text-ink-soft">{point}</span>
-              </motion.li>
+              </m.li>
             ))}
-          </motion.ul>
+          </m.ul>
 
-          <motion.div
+          <m.div
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
@@ -125,7 +125,7 @@ export function GhanaSection() {
                 strokeWidth={2.5}
               />
             </a>
-          </motion.div>
+          </m.div>
         </div>
       </Container>
     </section>

@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { AnimatePresence, m } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { navLinks } from "@/data/navigation";
 import { Logo } from "@/components/layout/logo";
@@ -15,7 +14,7 @@ export function Navbar() {
 
   return (
     <>
-      <motion.header
+      <m.header
         initial={{ y: -24, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
@@ -30,9 +29,9 @@ export function Navbar() {
           )}
         >
           <Container className="flex items-center justify-between">
-            <Link to="/" aria-label="Dara Micro Credit home">
+            <a href="/" aria-label="Dara Micro Credit home">
               <Logo />
-            </Link>
+            </a>
 
             <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary">
               {navLinks.map((link) =>
@@ -63,7 +62,7 @@ export function Navbar() {
 
                     <AnimatePresence>
                       {openDropdown === link.label && (
-                        <motion.div
+                        <m.div
                           initial={{ opacity: 0, y: 8 }}
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0, y: 8 }}
@@ -82,7 +81,7 @@ export function Navbar() {
                               </a>
                             ))}
                           </div>
-                        </motion.div>
+                        </m.div>
                       )}
                     </AnimatePresence>
                   </div>
@@ -129,11 +128,11 @@ export function Navbar() {
             </button>
           </Container>
         </div>
-      </motion.header>
+      </m.header>
 
       <AnimatePresence>
         {open && (
-          <motion.div
+          <m.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -143,7 +142,7 @@ export function Navbar() {
             <Container className="flex min-h-full flex-col justify-between py-10">
               <nav className="flex flex-col gap-1" aria-label="Mobile">
                 {navLinks.map((link, i) => (
-                  <motion.div
+                  <m.div
                     key={link.href}
                     initial={{ opacity: 0, y: 24 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -177,11 +176,11 @@ export function Navbar() {
                           ))}
                       </div>
                     )}
-                  </motion.div>
+                  </m.div>
                 ))}
               </nav>
             </Container>
-          </motion.div>
+          </m.div>
         )}
       </AnimatePresence>
     </>

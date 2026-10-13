@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { Zap, FileCheck, Sliders, MapPin } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
@@ -23,7 +23,7 @@ export function TrustSection() {
             description="You got the business. We've got the funds. Dara Micro Credit is a Ghanaian lending house based in Achimota, built to help entrepreneurs, traders and everyday workers move forward without the frustration that usually comes with borrowing."
           />
 
-          <motion.div
+          <m.div
             variants={staggerChildren(0.08)}
             initial="hidden"
             whileInView="visible"
@@ -31,7 +31,7 @@ export function TrustSection() {
             className="mt-10 grid grid-cols-2 gap-3.5 sm:max-w-md"
           >
             {badges.map(({ icon: Icon, label }) => (
-              <motion.div
+              <m.div
                 key={label}
                 variants={fadeUp}
                 className="flex items-center gap-3 rounded-2xl border border-border bg-bg-soft px-4 py-3.5"
@@ -40,12 +40,12 @@ export function TrustSection() {
                   <Icon className="h-4 w-4" strokeWidth={2.25} />
                 </span>
                 <span className="text-[13.5px] font-semibold text-ink">{label}</span>
-              </motion.div>
+              </m.div>
             ))}
-          </motion.div>
+          </m.div>
         </div>
 
-        <motion.div
+        <m.div
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
@@ -53,7 +53,7 @@ export function TrustSection() {
           className="flex justify-center"
         >
           <GhanaNetworkGraphic />
-        </motion.div>
+        </m.div>
       </Container>
     </section>
   );

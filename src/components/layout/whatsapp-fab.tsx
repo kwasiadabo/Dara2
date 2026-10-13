@@ -1,10 +1,10 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { WhatsAppIcon } from "@/components/layout/social-icons";
 import { contactDetails } from "@/data/footer";
 
 export function WhatsAppFab() {
   return (
-    <motion.a
+    <m.a
       href={contactDetails.whatsapp}
       target="_blank"
       rel="noopener noreferrer"
@@ -17,6 +17,6 @@ export function WhatsAppFab() {
       className="fixed bottom-5 right-5 z-40 flex h-13 w-13 items-center justify-center rounded-full bg-accent text-white shadow-[var(--shadow-soft-lg)]"
     >
       <WhatsAppIcon className="h-6 w-6" strokeWidth={2} />
-    </motion.a>
+    </m.a>
   );
 }

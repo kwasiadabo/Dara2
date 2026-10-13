@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { Check } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
@@ -17,7 +17,7 @@ export function LoanProducts() {
           className="mx-auto max-w-2xl"
         />
 
-        <motion.div
+        <m.div
           variants={staggerChildren(0.09)}
           initial="hidden"
           whileInView="visible"
@@ -27,7 +27,7 @@ export function LoanProducts() {
           {loanProducts.map((product) => {
             const Icon = product.icon;
             return (
-              <motion.a
+              <m.a
                 key={product.id}
                 href={product.href}
                 variants={fadeUp}
@@ -60,10 +60,10 @@ export function LoanProducts() {
                     </li>
                   ))}
                 </ul>
-              </motion.a>
+              </m.a>
             );
           })}
-        </motion.div>
+        </m.div>
       </Container>
     </section>
   );

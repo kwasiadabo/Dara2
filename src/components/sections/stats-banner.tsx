@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { Container } from "@/components/ui/container";
 import { stats } from "@/data/stats";
 import { useCountUp } from "@/hooks/use-count-up";
@@ -8,14 +8,14 @@ function StatItem({ value, prefix, suffix, label }: (typeof stats)[number]) {
   const { ref, value: current } = useCountUp(value);
 
   return (
-    <motion.div ref={ref} variants={fadeUp} className="flex flex-col items-center gap-2 px-1 text-center">
+    <m.div ref={ref} variants={fadeUp} className="flex flex-col items-center gap-2 px-1 text-center">
       <span className="text-[26px] font-extrabold tracking-tight text-white sm:text-[32px]">
         {prefix}
         {current}
         {suffix}
       </span>
       <span className="text-[12px] font-medium text-white/70 sm:text-[13px]">{label}</span>
-    </motion.div>
+    </m.div>
   );
 }
 
@@ -41,7 +41,7 @@ export function StatsBanner() {
       />
 
       <Container className="relative">
-        <motion.div
+        <m.div
           variants={staggerChildren(0.1)}
           initial="hidden"
           whileInView="visible"
@@ -51,7 +51,7 @@ export function StatsBanner() {
           {stats.map((stat) => (
             <StatItem key={stat.id} {...stat} />
           ))}
-        </motion.div>
+        </m.div>
       </Container>
     </section>
   );

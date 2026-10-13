@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 
 const nodes = [
 	// { cx: 168, cy: 92, label: "Tamale" },
@@ -40,7 +40,7 @@ export function GhanaNetworkGraphic() {
 
 				{nodes.map((n, i) => (
 					<g key={n.label}>
-						<motion.circle
+						<m.circle
 							cx={n.cx}
 							cy={n.cy}
 							r={14}

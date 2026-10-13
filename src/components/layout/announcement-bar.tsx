@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, m } from "framer-motion";
 import { X } from "lucide-react";
 import { Container } from "@/components/ui/container";
 
@@ -9,7 +9,7 @@ export function AnnouncementBar() {
   return (
     <AnimatePresence initial={false}>
       {visible && (
-        <motion.div
+        <m.div
           initial={{ height: 0, opacity: 0 }}
           animate={{ height: "auto", opacity: 1 }}
           exit={{ height: 0, opacity: 0 }}
@@ -29,7 +29,7 @@ export function AnnouncementBar() {
               <X className="h-3.5 w-3.5" />
             </button>
           </Container>
-        </motion.div>
+        </m.div>
       )}
     </AnimatePresence>
   );

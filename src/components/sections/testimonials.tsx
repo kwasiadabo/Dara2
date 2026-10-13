@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { m, AnimatePresence } from "framer-motion";
 import { Star, ChevronLeft, ChevronRight, Quote } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
@@ -37,7 +37,7 @@ export function Testimonials() {
             <Quote className="h-8 w-8 text-primary/25" strokeWidth={1.75} />
 
             <AnimatePresence mode="wait">
-              <motion.div
+              <m.div
                 key={testimonial.id}
                 initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -65,7 +65,7 @@ export function Testimonials() {
                     </p>
                   </div>
                 </div>
-              </motion.div>
+              </m.div>
             </AnimatePresence>
           </div>
 

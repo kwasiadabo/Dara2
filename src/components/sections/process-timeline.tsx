@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { processSteps } from "@/data/process";
@@ -15,7 +15,7 @@ export function ProcessTimeline() {
           className="mx-auto max-w-2xl"
         />
 
-        <motion.div
+        <m.div
           variants={staggerChildren(0.1)}
           initial="hidden"
           whileInView="visible"
@@ -29,7 +29,7 @@ export function ProcessTimeline() {
           />
 
           {processSteps.map((step) => (
-            <motion.div key={step.id} variants={fadeUp} className="relative flex flex-col">
+            <m.div key={step.id} variants={fadeUp} className="relative flex flex-col">
               <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-accent text-[15px] font-bold text-white">
                 {step.number}
               </div>
@@ -39,9 +39,9 @@ export function ProcessTimeline() {
               <p className="mt-2 max-w-[240px] text-[14.5px] leading-relaxed text-ink-soft">
                 {step.description}
               </p>
-            </motion.div>
+            </m.div>
           ))}
-        </motion.div>
+        </m.div>
       </Container>
     </section>
   );

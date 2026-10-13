@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { fadeUp, viewportOnce } from "@/lib/motion";
@@ -31,16 +31,16 @@ export function SectionHeading({
       )}
     >
       {eyebrow && (
-        <motion.div
+        <m.div
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
           viewport={viewportOnce}
         >
           <Eyebrow tone={tone}>{eyebrow}</Eyebrow>
-        </motion.div>
+        </m.div>
       )}
-      <motion.h2
+      <m.h2
         variants={fadeUp}
         initial="hidden"
         whileInView="visible"
@@ -53,9 +53,9 @@ export function SectionHeading({
         )}
       >
         {title}
-      </motion.h2>
+      </m.h2>
       {description && (
-        <motion.p
+        <m.p
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
@@ -67,7 +67,7 @@ export function SectionHeading({
           )}
         >
           {description}
-        </motion.p>
+        </m.p>
       )}
     </div>
   );

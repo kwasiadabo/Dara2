@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { differentiators } from "@/data/differentiators";
@@ -18,14 +18,14 @@ export function WhyDara() {
           className="mx-auto max-w-2xl"
         />
 
-        <motion.div
+        <m.div
           variants={staggerChildren(0.08)}
           initial="hidden"
           whileInView="visible"
           viewport={viewportOnce}
           className="mt-16 grid grid-cols-1 gap-4 sm:grid-cols-6"
         >
-          <motion.div
+          <m.div
             variants={fadeUp}
             className="flex flex-col justify-between rounded-[1.75rem] bg-accent p-9 text-white sm:col-span-6 lg:col-span-3"
           >
@@ -38,12 +38,12 @@ export function WhyDara() {
                 {featured.description}
               </p>
             </div>
-          </motion.div>
+          </m.div>
 
           {rest.map((item, i) => {
             const Icon = item.icon;
             return (
-              <motion.div
+              <m.div
                 key={item.id}
                 variants={fadeUp}
                 className={
@@ -60,10 +60,10 @@ export function WhyDara() {
                     {item.description}
                   </p>
                 </div>
-              </motion.div>
+              </m.div>
             );
           })}
-        </motion.div>
+        </m.div>
       </Container>
     </section>
   );

@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import type { LucideIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -22,13 +22,13 @@ export function FloatingMetric({
   floatDuration = 5,
 }: FloatingMetricProps) {
   return (
-    <motion.div
+    <m.div
       initial={{ opacity: 0, y: 20, scale: 0.92 }}
       animate={{ opacity: 1, y: 0, scale: 1 }}
       transition={{ duration: 0.7, delay, ease: [0.16, 1, 0.3, 1] }}
       className={cn("absolute", className)}
     >
-      <motion.div
+      <m.div
         animate={{ y: [0, -8, 0] }}
         transition={{
           duration: floatDuration,
@@ -54,7 +54,7 @@ export function FloatingMetric({
             <span className="text-[14px] font-bold text-ink">{value}</span>
           </div>
         </div>
-      </motion.div>
-    </motion.div>
+      </m.div>
+    </m.div>
   );
 }

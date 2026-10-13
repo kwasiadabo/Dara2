@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import {
 	ArrowRight,
 	Phone,
@@ -38,16 +38,16 @@ export function Hero() {
 			<Container className="relative grid grid-cols-1 items-center gap-16 lg:grid-cols-[1fr_0.9fr] lg:gap-10">
 				{/* Left: copy */}
 				<div className="max-w-xl">
-					<motion.div
+					<m.div
 						custom={0}
 						variants={heroReveal}
 						initial="hidden"
 						animate="visible"
 					>
 						<Eyebrow>Micro Credit — Achimota, Accra</Eyebrow>
-					</motion.div>
+					</m.div>
 
-					<motion.h1
+					<m.h1
 						custom={1}
 						variants={heroReveal}
 						initial="hidden"
@@ -56,9 +56,9 @@ export function Hero() {
 					>
 						Straightforward capital for{' '}
 						<span className="text-primary">Accra's entrepreneurs.</span>
-					</motion.h1>
+					</m.h1>
 
-					<motion.p
+					<m.p
 						custom={2}
 						variants={heroReveal}
 						initial="hidden"
@@ -69,9 +69,9 @@ export function Hero() {
 						Achimota-Accra. We fund traders, business owners and salary workers
 						with clear terms, fast decisions and no hidden cost. Your wealth,
 						our wealth.
-					</motion.p>
+					</m.p>
 
-					<motion.div
+					<m.div
 						custom={3}
 						variants={heroReveal}
 						initial="hidden"
@@ -93,9 +93,9 @@ export function Hero() {
 						>
 							<a href="#loans">Explore Our Solutions</a>
 						</Button>
-					</motion.div>
+					</m.div>
 
-					<motion.div
+					<m.div
 						custom={4}
 						variants={heroReveal}
 						initial="hidden"
@@ -118,11 +118,11 @@ export function Hero() {
 							<span className="text-2xl font-extrabold text-ink">98%</span>
 							<span className="text-[13px] text-ink-soft">Satisfaction</span>
 						</div>
-					</motion.div>
+					</m.div>
 				</div>
 
 				{/* Right: image + floating cards */}
-				<motion.div
+				<m.div
 					initial={{ opacity: 0, scale: 0.96 }}
 					animate={{ opacity: 1, scale: 1 }}
 					transition={{ duration: 0.9, ease: easeOutExpo, delay: 0.2 }}
@@ -168,7 +168,7 @@ export function Hero() {
 						delay={1.0}
 						floatDuration={5}
 					/>
-				</motion.div>
+				</m.div>
 			</Container>
 		</section>
 	);
